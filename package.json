@@ -1,0 +1,23 @@
+{
+  "name": "diningbenefit",
+  "version": "1.0.0",
+  "description": "diningbenefit.com website",
+  "private": true,
+  "scripts": {
+    "build": "npx webpack-cli --config webpack.js --mode production",
+    "build-dev": "npx webpack-cli --config webpack.js --mode development",
+    "watch-dev": "npx webpack-cli --watch --config webpack.js --mode development"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "@analytics/google-analytics": "^1.0.5",
+    "analytics": "^0.8.1",
+    "maplibre-gl": "^2.4.0"
+  }
+}

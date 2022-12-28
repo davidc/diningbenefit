@@ -1,4 +1,16 @@
 .DS_Store
+
+# IDEA per-user files
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/shelf
+
+# NodeJS modules
+/node_modules/
+
+# Generated files
 /datascraper/cache/
 /datascraper/venv/
 /src/data/
+/dist/

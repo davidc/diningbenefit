@@ -1,0 +1,48 @@
+BODY {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    user-select: none;
+}
+
+#infoBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#infoBoxContent {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 10%);
+    width: auto;
+    max-height: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+}
+
+#infoBoxCloser {
+    float: right;
+    cursor: pointer;
+}
+
+#cuisineSelectAll, #cuisineSelectNone {
+    border: revert;
+    background: revert;
+    height: revert;
+    width: revert;
+    display: inline;
+    padding: 0px 5px;
+}
