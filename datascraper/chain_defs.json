@@ -1,0 +1,17 @@
+[
+  {
+    "id": "breadstreet",
+    "name": "Bread Street Kitchen",
+    "match": "^Bread Street Kitchen"
+  },
+  {
+    "id": "ivy",
+    "name": "The Ivy",
+    "match": "^(The Ivy |Ivy )"
+  },
+  {
+    "id": "block",
+    "name": "Block House/Jim Block",
+    "match": "^(Block House|Jim Block)"
+  }
+]

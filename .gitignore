@@ -1,0 +1,4 @@
+.DS_Store
+/datascraper/cache/
+/datascraper/venv/
+/src/data/
