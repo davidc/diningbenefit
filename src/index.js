@@ -1,4 +1,3 @@
-
 import maplibregl from 'maplibre-gl';
 import "maplibre-gl/dist/maplibre-gl.css";
 
@@ -8,28 +7,33 @@ import googleAnalytics from '@analytics/google-analytics';
 
 import './index.css';
 
-
-const analytics = Analytics({
-    app: 'awesome-app',
-    plugins: [
-        googleAnalytics({
-            measurementIds: ['G-G8Q3LXNDMP']
-        })
-    ]
-})
-
-analytics.page();
-
+/* Load data */
 
 import chains from './data/chains.json';
 import country_bboxes from './data/country_bboxes.json';
 import cuisines from './data/cuisines.json';
 import restaurants from './data/restaurants.geojson';
 
+
+if (PRODUCTION) {
+
+    const analytics = Analytics({
+        // app: 'awesome-app',
+        debug: true,
+        plugins: [
+            googleAnalytics({
+                measurementIds: ['G-G8Q3LXNDMP']
+            })
+        ]
+    })
+
+    analytics.page();
+}
+
 var map = new maplibregl.Map({
     container: 'map',
     style:
-        'https://api.maptiler.com/maps/streets/style.json?key=KhJqoeUtyeWuJ5Pwg0uj',
+        'https://api.maptiler.com/maps/streets/style.json?key=' + MAPTILER_KEY,
     center: [0, 54],
     zoom: 5,
     hash: true,
