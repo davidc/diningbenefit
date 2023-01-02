@@ -42,6 +42,9 @@ var map = new maplibregl.Map({
     touchPitch: false,
 });
 
+// disable map rotation using touch rotation gesture
+map.touchZoomRotate.disableRotation();
+
 var mapData = undefined;
 
 class FilterCuisineControl {
@@ -401,7 +404,6 @@ function setupMapData(data) {
     });
 
     map.on('click', 'clustered-restaurants', function (e) {
-        console.log(e);
         var features = map.queryRenderedFeatures(e.point, {
             layers: ['clustered-restaurants']
         });

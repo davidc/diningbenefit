@@ -5,8 +5,8 @@ const webpack = require('webpack');
 
 module.exports = (env, args) => {
 
-    var production = args.mode == 'production';
-    var commonConfig = {
+    const production = args.mode === 'production';
+    const commonConfig = {
         entry: './src/index.js',
         output: {
             filename: 'main.[contenthash].js',
@@ -35,10 +35,13 @@ module.exports = (env, args) => {
                 MAPTILER_KEY: JSON.stringify(production ? 'ds7FPmjF0naz2CRbEFav' : 'KhJqoeUtyeWuJ5Pwg0uj'),
             }),
         ],
+        optimization: {
+            usedExports: true,
+        },
     };
 
-    var devConfig = {};
-    var prodConfig = {};
+    const devConfig = {};
+    const prodConfig = {};
 
     return merge(commonConfig, production ? prodConfig : devConfig);
 }
